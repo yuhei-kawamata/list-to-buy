@@ -1,0 +1,50 @@
+body {
+    background-color: #f2efe7;
+}
+
+.register {
+    margin: 100px auto 0;
+    max-width: 1230px;
+    display: flex;
+}
+
+.register__area {
+    margin: 0 auto;
+    width: 30%;
+}
+
+.register__title {
+    margin: 40px auto;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.register__input__area {
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 25px;
+}
+
+.input__area {
+    height: 30px;
+}
+
+.input__area__checkbox {
+    height: 30px;
+    margin-right: auto;
+    transform: scale(1.5);
+}
+
+.register__button {
+    height: 40px;
+    color: #f2efe7;
+    background-color: #3368a0;
+    border: none;
+}
+
+.link__login {
+    text-align: center;
+}

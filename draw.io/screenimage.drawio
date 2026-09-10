@@ -1,0 +1,147 @@
+<mxfile host="65bd71144e">
+    <diagram id="xdvd5dYg9e2eP3u8jCeo" name="買うものリスト">
+        <mxGraphModel dx="664" dy="481" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="30" width="510" height="330" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="30" width="510" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="ロゴ" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="45" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="買うものリスト" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="110" width="170" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="新規登録" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#050505, #ededed);fontColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="430" y="120" width="76" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="商品名" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="160" width="70" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="期限" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="210" y="160" width="70" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="優先度" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="160" width="70" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="&lt;div&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;&lt;span style=&quot;color: rgb(63, 63, 63);&quot;&gt;牛乳　　みんな　　　9/5　　　　　中&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;おむつ　Kくん　　　9/6　　　　　高&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;自由画帳　Rちゃん　9/7　　　　　高&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;&lt;br style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="190" width="250" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="完了" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#050505, #ededed);fontColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="190" width="50" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="表示順&lt;div&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;期限が短い順⇒　&lt;/span&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;優先度の高い順⇒　&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;登録が古い順&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;期限が切れたら赤字で表示&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="371" width="290" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="商品名などは、この画面上でそのまま更新ができるようにしたい" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="440" width="290" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="表示される商品が増えてきたら&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;スクロールできるようにする&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="371" width="290" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;" parent="1" edge="1">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="510" y="290" as="sourcePoint"/>
+                        <mxPoint x="510" y="190" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="27" value="各種ボタンは管理者だけに表示するようにしたい" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="440" width="290" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="削除" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#050505, #ededed);fontColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="190" width="50" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="完了" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#050505, #ededed);fontColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="230" width="50" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="削除" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#050505, #ededed);fontColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="230" width="50" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="完了" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#050505, #ededed);fontColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="270" width="50" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="削除" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#050505, #ededed);fontColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="270" width="50" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="買ったものリスト" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#050505, #ededed);fontColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="420" y="50" width="106" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="cyRtfXL3arcBHsDaUJKi-34" value="買う場所&lt;div&gt;（自由入力）&lt;/div&gt;&lt;div&gt;空欄でもOK&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="560" y="165" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="cyRtfXL3arcBHsDaUJKi-35" value="急ぎチェックボックス&lt;div&gt;（チェックがあるのを上に表示）&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="560" y="240" width="120" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram name="買ったものリスト" id="FV8CwIXvJiA1Lek90g93">
+        <mxGraphModel dx="664" dy="481" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="cHe4P2ecNn3TE1cMH6lF-0"/>
+                <mxCell id="cHe4P2ecNn3TE1cMH6lF-1" parent="cHe4P2ecNn3TE1cMH6lF-0"/>
+                <mxCell id="cHe4P2ecNn3TE1cMH6lF-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="cHe4P2ecNn3TE1cMH6lF-1" vertex="1">
+                    <mxGeometry x="40" y="30" width="510" height="330" as="geometry"/>
+                </mxCell>
+                <mxCell id="cHe4P2ecNn3TE1cMH6lF-3" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="cHe4P2ecNn3TE1cMH6lF-1" vertex="1">
+                    <mxGeometry x="40" y="30" width="510" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="cHe4P2ecNn3TE1cMH6lF-4" value="ロゴ" style="rounded=0;whiteSpace=wrap;html=1;" parent="cHe4P2ecNn3TE1cMH6lF-1" vertex="1">
+                    <mxGeometry x="70" y="45" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="cHe4P2ecNn3TE1cMH6lF-5" value="買ったものリスト" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;" parent="cHe4P2ecNn3TE1cMH6lF-1" vertex="1">
+                    <mxGeometry x="200" y="110" width="170" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="cHe4P2ecNn3TE1cMH6lF-7" value="商品名" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;" parent="cHe4P2ecNn3TE1cMH6lF-1" vertex="1">
+                    <mxGeometry x="110" y="190" width="70" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="cHe4P2ecNn3TE1cMH6lF-9" value="購入日" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;" parent="cHe4P2ecNn3TE1cMH6lF-1" vertex="1">
+                    <mxGeometry x="200" y="190" width="70" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="cHe4P2ecNn3TE1cMH6lF-10" value="&lt;div&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;&lt;span style=&quot;color: rgb(63, 63, 63);&quot;&gt;　　　　　&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;&lt;span style=&quot;color: rgb(63, 63, 63);&quot;&gt;自由画帳　Rちゃん　9/7&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;&lt;span style=&quot;color: rgb(63, 63, 63);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;おむつ　Kくん　　　9/6&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;牛乳　　みんな　　　9/5&lt;/span&gt;　　　　　&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;　　　　　&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;&lt;br style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;align=left;verticalAlign=top;" parent="cHe4P2ecNn3TE1cMH6lF-1" vertex="1">
+                    <mxGeometry x="110" y="220" width="200" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="cHe4P2ecNn3TE1cMH6lF-12" value="表示順&lt;div&gt;購入日の新しい順&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="cHe4P2ecNn3TE1cMH6lF-1" vertex="1">
+                    <mxGeometry x="90" y="371" width="290" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="cHe4P2ecNn3TE1cMH6lF-13" value="キーワード検索、誰のためのかで検索できるようにしたい" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="cHe4P2ecNn3TE1cMH6lF-1" vertex="1">
+                    <mxGeometry x="90" y="440" width="290" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="cHe4P2ecNn3TE1cMH6lF-14" value="表示される商品が増えてきたら&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;スクロールできるようにする&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="cHe4P2ecNn3TE1cMH6lF-1" vertex="1">
+                    <mxGeometry x="400" y="371" width="290" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="cHe4P2ecNn3TE1cMH6lF-15" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;" parent="cHe4P2ecNn3TE1cMH6lF-1" edge="1">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="440" y="320" as="sourcePoint"/>
+                        <mxPoint x="440" y="220" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="cHe4P2ecNn3TE1cMH6lF-17" value="もう一度買う" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#050505, #ededed);fontColor=#FFFFFF;" parent="cHe4P2ecNn3TE1cMH6lF-1" vertex="1">
+                    <mxGeometry x="310" y="220" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="cHe4P2ecNn3TE1cMH6lF-19" value="もう一度買う" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#050505, #ededed);fontColor=#FFFFFF;" parent="cHe4P2ecNn3TE1cMH6lF-1" vertex="1">
+                    <mxGeometry x="310" y="260" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="cHe4P2ecNn3TE1cMH6lF-21" value="もう一度買う" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#050505, #ededed);fontColor=#FFFFFF;" parent="cHe4P2ecNn3TE1cMH6lF-1" vertex="1">
+                    <mxGeometry x="310" y="300" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="cHe4P2ecNn3TE1cMH6lF-22" value="買ったものリスト" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#050505, #ededed);fontColor=#FFFFFF;" parent="cHe4P2ecNn3TE1cMH6lF-1" vertex="1">
+                    <mxGeometry x="420" y="50" width="106" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="48FuQDmB9yV6Ie5iez0l-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="cHe4P2ecNn3TE1cMH6lF-1" vertex="1">
+                    <mxGeometry x="85" y="150" width="145" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="48FuQDmB9yV6Ie5iez0l-3" value="誰の" style="rounded=0;whiteSpace=wrap;html=1;" parent="cHe4P2ecNn3TE1cMH6lF-1" vertex="1">
+                    <mxGeometry x="250" y="150" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="48FuQDmB9yV6Ie5iez0l-5" value="検索" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#050505, #ededed);fontColor=#FFFFFF;" parent="cHe4P2ecNn3TE1cMH6lF-1" vertex="1">
+                    <mxGeometry x="350" y="150" width="106" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
