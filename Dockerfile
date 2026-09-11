@@ -1,8 +1,8 @@
 FROM php:8.2-fpm
 
-# 必要なパッケージとPHP拡張をインストール
+# Node.js と npm、その他必要なパッケージをインストール
 RUN apt-get update && apt-get install -y \
-    zip unzip git libpq-dev \
+    zip unzip git libpq-dev nodejs npm \
     && docker-php-ext-install pdo pdo_pgsql
 
 # Composer のインストール
@@ -12,9 +12,11 @@ WORKDIR /var/www
 
 COPY . .
 
-# 依存関係のインストール
+# PHP の依存関係インストール
 RUN composer install --no-dev --optimize-autoloader
 
-# ポート設定と起動
+# Node.js（CSS/JS）の依存関係インストールとビルド
+RUN npm install && npm run build
+
 EXPOSE 8000
-CMD php artisan config:cache && php artisan route:cache && php artisan view:cache && php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=8000
+CMD php artisan config:cache && php artisan route:cache && php artisan view:cache && php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=8000 -t public
