@@ -24,6 +24,29 @@ new class extends Component
         'hurry_flag' => 'boolean',
     ];
 
+    public function with()
+    {
+        return [
+            // 過去の「商品名」重複なし最新10件
+            'suggestNames' => Item::query()
+                ->whereNotNull('name')
+                ->select('name')
+                ->groupBy('name')
+                ->orderByRaw('MAX(created_at) DESC')
+                ->take(10)
+                ->pluck('name'),
+
+            // 過去の「買う場所」重複なし最新20件
+            'suggestStores' => Item::query()
+                ->whereNotNull('store_name')
+                ->select('store_name')
+                ->groupBy('store_name')
+                ->orderByRaw('MAX(created_at) DESC')
+                ->take(10)
+                ->pluck('store_name'),
+        ];
+    }
+
     // ポップアップを開く
     public function openModal()
     {
@@ -34,7 +57,7 @@ new class extends Component
             'store_name',
             'quantity',
             'hurry_flag'
-            ]);
+        ]);
         
         $this->isOpen = true;
     }
@@ -50,7 +73,7 @@ new class extends Component
     {
         $this->user_id = Auth::id();
 
-        $validated =$this->validate();
+        $validated = $this->validate();
         Item::create($validated);
 
         $this->closeModal();
@@ -77,13 +100,39 @@ new class extends Component
             <form wire:submit.prevent="store">
                 <div class="list__registration__area">
                     
+                    <!-- 買いたいもの（商品名） -->
                     <div class="form-group">
-                        <input type="text" wire:model="name" placeholder="買いたいもの">
+                        <input 
+                            type="text" 
+                            wire:model="name" 
+                            list="suggest-item-names" 
+                            autocomplete="off" 
+                            placeholder="買いたいもの"
+                        >
+                        <datalist id="suggest-item-names">
+                            @foreach($suggestNames as $suggestName)
+                                <option value="{{ $suggestName }}"></option>
+                            @endforeach
+                        </datalist>
+
                         @error('name') <span class="error-message">{{ $message }}</span> @enderror
                     </div>
                     
+                    <!-- 買う場所 -->
                     <div class="form-group">
-                        <input type="text" wire:model="store_name" placeholder="買う場所">
+                        <input 
+                            type="text" 
+                            wire:model="store_name" 
+                            list="suggest-store-names" 
+                            autocomplete="off" 
+                            placeholder="買う場所"
+                        >
+                        <datalist id="suggest-store-names">
+                            @foreach($suggestStores as $suggestStore)
+                                <option value="{{ $suggestStore }}"></option>
+                            @endforeach
+                        </datalist>
+
                         @error('store_name') <span class="error-message">{{ $message }}</span> @enderror
                     </div>
 

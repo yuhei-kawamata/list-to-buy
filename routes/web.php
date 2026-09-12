@@ -3,6 +3,11 @@
 use App\Http\Controllers\ItemController;
 use Illuminate\Support\Facades\Route;
 
+// Topページ(/)にアクセスしたときに、/itemsにリダイレクトさせるための設定
+// デプロイした際のアクセス先が'/'であり、直接'/items'にはアクセスできない
+Route::get('/', function () {
+    return redirect()->route('items.index');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/items', [ItemController::class, 'index'])->name('items.index');
