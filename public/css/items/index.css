@@ -64,13 +64,29 @@
 .list__registration__title {
     margin: 20px auto;
     width: 80%;
-    font-size: 18px;
     text-align: center;
 }
 
 .list__registration__title button {
-    font-size: 20px;
+    font-size: 18px;
     width: 25%;
+    color: #f2efe7;
+    background-color: #3368a0;
+    border: none;
+    cursor: pointer;
+    height: 50px;
+}
+
+.complete__all__at__once {
+    margin: 20px auto;
+    margin-top: 40px;
+    width: 80%;
+    text-align: center;
+}
+
+.complete__all__at__once button {
+    font-size: 18px;
+    width: 20%;
     color: #f2efe7;
     background-color: #3368a0;
     border: none;
@@ -150,6 +166,15 @@
     padding: 0;
 }
 
+/* 購入チェックにチェックが入ると、見え消しで表示される
+    1番目のtdであることを明示的に指定。
+*/
+.to__buy__list__table__area
+    tr:has(td:nth-child(1) input[type="checkbox"]:checked) {
+    text-decoration: line-through;
+    color: #9ca3af;
+}
+
 .to__buy__list__table__header {
     height: 60px;
     color: #f2efe7;
@@ -183,4 +208,39 @@
     color: #f2efe7;
     background-color: #da3838;
     padding: 3px 10px;
+}
+
+@media (max-width: 768px) {
+    .list__registration__title button {
+        font-size: 17px;
+        width: 55%;
+    }
+
+    .complete__all__at__once button {
+        font-size: 17px;
+        width: 55%;
+    }
+
+    .to__buy__list__area {
+        margin-top: 50px;
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .to__buy__list__table {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 650px;
+        white-space: nowrap;
+    }
+
+    th:nth-child(1),
+    th:nth-child(2),
+    td:nth-child(1),
+    td:nth-child(2) {
+        width: 10px;
+    }
 }

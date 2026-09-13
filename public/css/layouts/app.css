@@ -14,6 +14,7 @@ body {
     justify-content: space-between;
     max-width: 1230px;
     margin: 0 auto;
+    position: relative; /* ハンバーガーメニューが出てくる位置を設定 */
 }
 
 .header__logo,
@@ -27,16 +28,6 @@ body {
 .header__bought__list {
     margin-left: auto;
     margin-right: 20px;
-}
-
-.header__button {
-    background: none;
-    border: none;
-    color: #f2efe7;
-    font-weight: 500;
-    font-size: 18px;
-    cursor: pointer;
-    padding: 0 6px;
 }
 
 .alert__success__area {
@@ -61,4 +52,102 @@ body {
     margin: 0 auto;
     padding: 10px 30px;
     max-width: 1230px;
+}
+
+/* 以下、ハンバーガーメニューを作るための設定 */
+.drawer-checkbox {
+    display: none;
+}
+
+/* --- ハンバーガーアイコン（3本線） --- */
+.drawer-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.drawer-icon span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease; /* アニメーションをつける */
+}
+
+/* --- 開閉するメニューエリア --- */
+.drawer-nav {
+    position: absolute;
+    top: 100%; /* ヘッダーの直下に配置 */
+    right: 0;
+    width: 15%;
+    background-color: #444;
+    /* 初期状態は非表示（上に隠す、あるいはopacity: 0にする） */
+    display: none;
+    text-align: center;
+}
+
+.drawer-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.drawer-menu form {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+}
+
+.drawer-menu li a,
+.header__button {
+    /* レイアウト・位置調整 */
+    display: block !important;
+    width: 100% !important;
+    padding: 15px 20px;
+    text-align: center; /* 文字を完全中央揃え */
+    box-sizing: border-box;
+
+    /* 見た目・フォントの統一 */
+    color: #fff; /* 文字色 */
+    text-decoration: none; /* 下線を消す */
+    font: inherit; /* 親要素のフォント・サイズを完全継承 */
+
+    /* ボタン特有のスタイルをリセット */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* ===============================================
+    チェックボックスがON（:checked）のときのスタイル
+=============================================== */
+
+/* 1. メニューを表示する */
+.drawer-checkbox:checked ~ .drawer-nav {
+    display: block;
+}
+
+/* 2. アイコンを「×」に変形させるアニメーション */
+.drawer-checkbox:checked ~ .drawer-icon span:nth-child(1) {
+    transform: translateY(9.5px) rotate(45deg);
+}
+
+.drawer-checkbox:checked ~ .drawer-icon span:nth-child(2) {
+    opacity: 0; /* 真ん中の線を消す */
+}
+
+.drawer-checkbox:checked ~ .drawer-icon span:nth-child(3) {
+    transform: translateY(-9.5px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .drawer-nav {
+        width: 40%;
+    }
 }

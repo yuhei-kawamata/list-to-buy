@@ -48,3 +48,17 @@ body {
 .link__login {
     text-align: center;
 }
+
+.alert__danger {
+    color: red;
+}
+
+@media (max-width: 768px) {
+    .register {
+        margin: 0 auto;
+    }
+
+    .register__area {
+        width: 70%;
+    }
+}

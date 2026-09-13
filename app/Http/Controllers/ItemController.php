@@ -37,6 +37,21 @@ class ItemController extends Controller
         return redirect()->route('items.index')->with('success', '買い物完了！');
     }
 
+    public function completeMultiple(Request $request)
+    {
+        $validated = $request->validate([
+            'items' => 'required|array',
+            'items.*' => 'exists:items,id',
+        ]);
+
+        Item::whereIn('id', $validated['items'])
+            ->update([
+                'complete_flag' => 1,
+            ]);
+
+        return redirect()->back()->with('success', '選択した商品を完了にしました');
+    }
+
     public function destroy(string $id)
     {
         $item = Item::findOrFail($id);

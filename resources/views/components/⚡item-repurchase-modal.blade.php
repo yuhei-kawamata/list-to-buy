@@ -26,6 +26,29 @@ new class extends Component {
         'hurry_flag' => 'boolean',
     ];
 
+    public function with()
+    {
+        return [
+            // 過去の「商品名」重複なし最新10件
+            'suggestNames' => Item::query()
+                ->whereNotNull('name')
+                ->select('name')
+                ->groupBy('name')
+                ->orderByRaw('MAX(created_at) DESC')
+                ->take(10)
+                ->pluck('name'),
+
+            // 過去の「買う場所」重複なし最新20件
+            'suggestStores' => Item::query()
+                ->whereNotNull('store_name')
+                ->select('store_name')
+                ->groupBy('store_name')
+                ->orderByRaw('MAX(created_at) DESC')
+                ->take(10)
+                ->pluck('store_name'),
+        ];
+    }
+
     // コンポーネント初期化時に呼ばれるメソッド
     public function mount(Item $item = null)
     {
@@ -98,15 +121,41 @@ new class extends Component {
                 <div class="list__registration__area">
 
                     <div class="form-group">
-                        <input type="text" wire:model="name" placeholder="買いたいもの">
+                        <input
+                            type="text"
+                            wire:model="name"
+                            list="suggest-item-names"
+                            autocomplete="off"
+                            placeholder="買いたいもの"
+                        >
+                        
+                        <datalist id="suggest-item-names">
+                            @foreach($suggestNames as $suggestName)
+                            <option value="{{ $suggestName }}"></option>
+                            @endforeach
+                        </datalist>
+                        
                         @error('name') <span class="error-message">{{ $message }}</span> @enderror
                     </div>
 
                     <div class="form-group">
-                        <input type="text" wire:model="store_name" placeholder="買う場所">
+                        <input
+                            type="text"
+                            wire:model="store_name"
+                            list="suggest-store-names"
+                            autocomplete="off"
+                            placeholder="買う場所"
+                        >
+                        
+                        <datalist id="suggest-store-names">
+                            @foreach($suggestStores as $suggestStore)
+                            <option value="{{ $suggestStore }}"></option>
+                            @endforeach
+                        </datalist>
+                        
                         @error('store_name') <span class="error-message">{{ $message }}</span> @enderror
                     </div>
-
+                        
                     <div class="form-group">
                         <input type="number" wire:model="quantity" min="1" max="10">
                         @error('quantity') <span class="error-message">{{ $message }}</span> @enderror

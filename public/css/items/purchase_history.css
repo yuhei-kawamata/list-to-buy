@@ -80,14 +80,20 @@
     margin-right: 35px;
 }
 
+.search__button__area {
+    display: flex;
+    margin-left: auto;
+    gap: 2em;
+}
+
 .search__form__area button {
     font-size: 16px;
-    width: 10%;
-    margin-left: auto;
+    height: 40px;
     color: #f2efe7;
     background-color: #3368a0;
     border: none;
     cursor: pointer;
+    width: 7em;
 }
 
 .bought__list__area {
@@ -197,4 +203,36 @@
     border: none;
     cursor: pointer;
     height: 40px;
+}
+
+@media (max-width: 768px) {
+    .search__form__area {
+        display: block;
+    }
+
+    .search__form__area input {
+        width: 34%;
+        height: 25px;
+    }
+
+    .search__button__area {
+        margin-top: 20px;
+    }
+
+    .search__form__area button {
+        font-size: 14px;
+        height: 30px;
+        width: 6em;
+    }
+
+    .bought__list__table {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 500px;
+        white-space: nowrap;
+        font-size: 14px;
+    }
 }

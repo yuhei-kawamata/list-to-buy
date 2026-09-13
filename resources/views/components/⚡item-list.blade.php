@@ -43,52 +43,57 @@ new class extends Component
         <div class="to__buy__list__table">
         <table class="to__buy__list__table__area">
         <tr class="to__buy__list__table__header">
-            <th>登録日</th>
-            <th>買いたいもの</th>
-            <th>買う場所</th>
-            <th>個数</th>
+            
+            <th>購入<br>チェック</th>
             <th>急ぎ</th>
+            <th>商品名</th>
+            <th>場所</th>
+            <th>個数</th>
+            <th>登録日</th>
             <th>登録者</th>
             <th></th>
             <th></th>
         </tr>
 
-        @foreach ($items as $item)
-        {{-- Livewireを反映させるため、wire:keyを設定 --}}
-        <tr class="to__buy__list__table__body" wire:key="item-{{ $item->id }}">
+            @foreach ($items as $item)
+            {{-- Livewireを反映させるため、wire:keyを設定 --}}
+            <tr class="to__buy__list__table__body" wire:key="item-{{ $item->id }}">
 
-            <td>{{ $item->created_at->format('m月d日') }}</td>
-            <td>{{ $item->name }}</td>
-            <td>{{ $item->store_name }}</td>
-            <td>{{ $item->quantity }}個</td>
-            
-            <td>
-                <input type="checkbox" name="hurry_flag" value="1" 
-                @checked($item->hurry_flag === 1) {{-- hurry_flagが１の時チェックが入るようにする --}}
-                wire:click="toggleHurry({{ $item->id }})">
-            </td>
+                {{-- 購入済みチェックフラグ --}}
+                <td><input type="checkbox" name="items[]" value="{{ $item->id }}"></td>
 
-            <td>{{ $item->user->name }}</td>
+                <td>
+                    <input type="checkbox" name="hurry_flag" value="1" 
+                    @checked($item->hurry_flag === 1) {{-- hurry_flagが１の時チェックが入るようにする --}}
+                    wire:click="toggleHurry({{ $item->id }})">
+                </td>
 
-            <td class="to__buy__list__table__complete">
-            <form method="POST" action="{{ route('items.complete', $item->id) }}">
-                @csrf
-                @method('PATCH')
+                <td>{{ $item->name }}</td>
+                <td>{{ $item->store_name }}</td>
+                <td>{{ $item->quantity }}個</td>
+                
+                <td>{{ $item->user->name }}</td>
+                <td>{{ $item->created_at->format('m月d日') }}</td>
 
-                <button type="submit">完了</button>
-            </form>
-            </td>
-            
-            <td class="to__buy__list__table__delete">
-            <form method="POST" action="{{ route('items.destroy', $item->id) }}">
-                @csrf
-                @method('DELETE')
-            
-                <button type="submit" onclick="return confirm('本当に削除しますか？')">削除</button>
-            </form>
-            </td>
-        </tr>
-        @endforeach
+                <td class="to__buy__list__table__complete">
+                <form method="POST" action="{{ route('items.complete', $item->id) }}">
+                    @csrf
+                    @method('PATCH')
+
+                    <button type="submit">完了</button>
+                </form>
+                </td>
+                
+                <td class="to__buy__list__table__delete">
+                <form method="POST" action="{{ route('items.destroy', $item->id) }}">
+                    @csrf
+                    @method('DELETE')
+                
+                    <button type="submit" onclick="return confirm('本当に削除しますか？')">削除</button>
+                </form>
+                </td>
+            </tr>
+            @endforeach
         </table>
-        </div>
     </div>
+</div>

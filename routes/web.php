@@ -13,6 +13,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/items', [ItemController::class, 'index'])->name('items.index');
     Route::post('/items', [ItemController::class, 'store'])->name('items.store');
     Route::patch('/items/{id}/complete', [ItemController::class, 'complete'])->name('items.complete');
+    Route::patch('/items/complete_multiple', [ItemController::class, 'completeMultiple'])->name('items.completeMultiple');
     Route::delete('/items/{id}/delete', [ItemController::class, 'destroy'])->name('items.destroy');
 
     Route::get('/items/purchase_history', [ItemController::class, 'purchaseHistoryShow'])->name('items.purchaseHistoryShow');

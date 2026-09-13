@@ -9,17 +9,9 @@
 </head>
 <body>
   <div class="login">
-
-  @if(session('error'))
-      <div class="alert__danger__area">
-        <div class="alert__danger">
-          {{ session('error') }}
-        </div>
-      </div>
-  @endif
-
+    
     <div class="login__area">
-
+        
       <div class="login__title">ログイン</div>
 
       <form method="POST" action="{{ route('login') }}">
@@ -27,11 +19,23 @@
         <div class="login__input__area">
           <label for="email">メールアドレス</label>
           <input class="input__area" type="text" id="email" name="email" value="{{ old('name') }}">
+          
+          @error('email')
+            <span class="alert__danger">
+              {{ $message }}
+            </span>
+          @enderror
         </div>
 
         <div class="login__input__area">
           <label for="password">パスワード</label>
           <input class="input__area" type="password" id="password" name="password">
+
+          @error('password')
+            <span class="alert__danger">
+              {{ $message }}
+            </span>
+          @enderror
         </div>
 
         <div class="login__input__area">

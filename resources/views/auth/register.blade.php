@@ -10,16 +10,6 @@
 <body>
   <div class="register">
 
-    <div>
-      @if($errors->any())
-        @foreach ($errors->all() as $error)
-        <ul>
-          <li>{{ $error }}</li>
-        </ul>
-        @endforeach
-      @endif
-    </div>  
-
     <div class="register__area">
 
       <div class="register__title">ユーザー登録</div>
@@ -29,21 +19,45 @@
         <div class="register__input__area">
           <label for="name">名前</label>
           <input class="input__area" type="text" id="name" name="name" value="{{ old('name') }}">
+
+          @error('name')
+            <span class="alert__danger">
+              {{ $message }}
+            </span>
+          @enderror
         </div>
 
         <div class="register__input__area">
           <label for="email">メールアドレス</label>
           <input class="input__area" type="email" id="email" name="email" value="{{ old('email') }}">
+
+          @error('email')
+            <span class="alert__danger">
+              {{ $message }}
+            </span>
+          @enderror
         </div>
 
         <div class="register__input__area">
           <label for="password">パスワード</label>
           <input class="input__area" type="password" id="password" name="password">
+
+          @error('password')
+            <span class="alert__danger">
+              {{ $message }}
+            </span>
+          @enderror
         </div>
 
         <div class="register__input__area">
           <label for="password_confirmaiton">パスワード（確認）</label>
           <input class="input__area" type="password" id="password_confirmation" name="password_confirmation">
+
+          @error('password_confirmation')
+            <span class="alert__danger">
+              {{ $message }}
+            </span>
+          @enderror
         </div>
 
         <div class="register__input__area">
@@ -58,7 +72,7 @@
       </form>
 
       <div class="link__login">
-        <a href="/login">すでにアカウントをお持ちの方はこちら</a>
+        <a href="/login">アカウントをお持ちの方はこちら</a>
       </div>
     </div>
 </body>

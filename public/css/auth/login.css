@@ -2,18 +2,6 @@ body {
     background-color: #f2efe7;
 }
 
-.alert__danger__area {
-    border-color: #f5c2c7;
-    background-color: #f8d7da;
-    color: #842029;
-}
-
-.alert__danger {
-    margin: 0 auto;
-    padding: 10px 30px;
-    max-width: 1230px;
-}
-
 .login {
     margin: 100px auto 0;
     max-width: 1230px;
@@ -53,6 +41,10 @@ body {
     height: 30px;
 }
 
+.alert__danger {
+    color: red;
+}
+
 .login__button {
     margin-top: 20px;
     font-size: 16px;
@@ -64,4 +56,10 @@ body {
 
 .link__register {
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .login__area {
+        width: 70%;
+    }
 }

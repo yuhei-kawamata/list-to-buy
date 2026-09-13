@@ -21,9 +21,14 @@
 
           <input type="text" name="keyword_store_name" placeholder="買った場所" value="{{ old('keyword_store_name') }}">
 
-          <button type="submit">検索</button>
+          <div class="search__button__area">
+            <button type="submit">検索</button>
+            <button><a herf={{ route('items.purchaseHistoryShow') }}>クリア</a></button>
+          </div>
+
         </div>
       </form>
+
     </div>
 
     <div class="bought__list__area">
@@ -32,30 +37,24 @@
       <div class="bought__list__table">
         <table class="bought__list__table__area">
           <tr class="bought__list__table__header">
-            <th>買ったもの</th>
-            <th>買った場所</th>
-            <th>購入日</th>
             <th></th>
+            <th>商品名</th>
+            <th>場所</th>
+            <th>購入日</th>
           </tr>
 
           @foreach ($items as $item)
           <tr class="bought__list__table__body">
-            <td>{{ $item->name }}</td>
-            <td>{{ $item->store_name }}</td>
-            <td>{{ $item->updated_at->format('Y年m月d日') }}</td>
-
             <td class="bought__list__table__repurchase">
               {{-- 商品再購入ポップアップ --}} 
               <livewire:item-repurchase-modal :item="$item" :key="'repurchase-modal-'.$item->id" />
 
-              {{-- <form method="POST" action="{{ route('items.repurchase', $item->id) }}">
-                @csrf
-                @method('PATCH')
-
-                <button type="submit">もう一度買う</button>
-              </form> --}}
-
             </td>
+            
+            <td>{{ $item->name }}</td>
+            <td>{{ $item->store_name }}</td>
+            <td>{{ $item->updated_at->format('Y年m月d日') }}</td>
+
           </tr>
           @endforeach
         </table>
