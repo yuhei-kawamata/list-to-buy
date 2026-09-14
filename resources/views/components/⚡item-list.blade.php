@@ -49,8 +49,8 @@ new class extends Component
             <th>商品名</th>
             <th>場所</th>
             <th>個数</th>
-            <th>登録日</th>
             <th>登録者</th>
+            <th>登録日</th>
             <th></th>
             <th></th>
         </tr>

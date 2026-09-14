@@ -36,7 +36,7 @@ new class extends Component
                 ->take(10)
                 ->pluck('name'),
 
-            // 過去の「買う場所」重複なし最新20件
+            // 過去の「買う場所」重複なし最新10件
             'suggestStores' => Item::query()
                 ->whereNotNull('store_name')
                 ->select('store_name')
@@ -75,10 +75,10 @@ new class extends Component
 
         $validated = $this->validate();
         Item::create($validated);
-
+        
         $this->closeModal();
-        $this->dispatch('item-created');
-    }
+        $this->dispatch('item-created', message: '商品を登録しました');
+        }
 };
 ?>
 
@@ -115,7 +115,11 @@ new class extends Component
                             @endforeach
                         </datalist>
 
-                        @error('name') <span class="error-message">{{ $message }}</span> @enderror
+                        @error('name')
+                            <div class="error__message">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
                     
                     <!-- 買う場所 -->
@@ -133,12 +137,20 @@ new class extends Component
                             @endforeach
                         </datalist>
 
-                        @error('store_name') <span class="error-message">{{ $message }}</span> @enderror
+                        @error('store_name') 
+                            <div class="error__message">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
 
                     <div class="form-group">
                         <input type="number" wire:model="quantity" min="1" max="10">
-                        @error('quantity') <span class="error-message">{{ $message }}</span> @enderror
+                        @error('quantity')
+                            <div class="error__message">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
             
                     <div class="list__registration__area__hurry">

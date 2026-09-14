@@ -10,20 +10,20 @@
   <div class="to__buy__list">
 
     {{-- 商品登録画面ポップアップ --}}
-    <livewire:item-registration-modal/>
+    <livewire:item-registration-modal />
 
-    <form method="POST" action="{{ route('items.completeMultiple') }}">
-      @csrf
-      @method('PATCH')
+      <form method="POST" action="{{ route('items.completeMultiple') }}">
+        @csrf
+        @method('PATCH')
 
-        <div class="complete__all__at__once">
-          <button onclick="return confirm('まとめて購入済みにしますか？')">まとめて購入完了</button>
-        </div>
-    
-    {{-- 登録商品リストテーブル表示欄 --}}
-    <livewire:item-list />
+          <div class="complete__all__at__once">
+            <button onclick="return confirm('まとめて購入済みにしますか？')">まとめて購入完了</button>
+          </div>
+      
+      {{-- 登録商品リストテーブル表示欄 --}}
+      <livewire:item-list />
 
-    </form>
+      </form>
 
   </div>
 @endsection

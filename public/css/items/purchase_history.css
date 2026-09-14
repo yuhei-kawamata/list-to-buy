@@ -210,6 +210,10 @@
         display: block;
     }
 
+    .search__form__title {
+        width: 90%;
+    }
+
     .search__form__area input {
         width: 34%;
         height: 25px;
@@ -225,13 +229,17 @@
         width: 6em;
     }
 
+    .bought__list__area {
+        width: 90%;
+    }
+
     .bought__list__table {
         width: 100%;
         overflow-x: auto;
     }
 
     table {
-        min-width: 500px;
+        min-width: 450px;
         white-space: nowrap;
         font-size: 14px;
     }

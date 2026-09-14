@@ -97,7 +97,7 @@ new class extends Component {
         Item::create($validated);
 
         $this->closeModal();
-        $this->dispatch('item-created');
+        $this->dispatch('item-created', message:'商品を登録しました');
     }
 };
 ?>

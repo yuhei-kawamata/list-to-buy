@@ -49,7 +49,7 @@ class ItemController extends Controller
                 'complete_flag' => 1,
             ]);
 
-        return redirect()->back()->with('success', '選択した商品を完了にしました');
+        return redirect()->back()->with('success', 'まとめて買い物完了！');
     }
 
     public function destroy(string $id)

@@ -42,15 +42,29 @@
       </div>
   </header>
   
-  <main>
-    
-    @if(session('success'))
-      <div class="alert__success__area">
-      <div class="alert__success">
-          {{ session('success') }}
+{{-- モーダルを使って登録した際にフラッシュメッセージが表示されるように必要な設定
+      後々使用するmessageとshowを定義し、Laravelの通常のセッションも表示できるように設定
+      セッションが無ければ、showは'false'（非表示）とする
+--}}
+  <main x-data="{ 
+            message: '{{ session('success') }}', 
+            show: {{ session()->has('success') ? 'true' : 'false' }} 
+        }"
+
+        {{-- モーダルの中に設定している$this->dispatch('item-created', message:'商品を登録しました');
+              が実行されたらフラッシュメッセージを表示する、という設定
+              '商品を登録しました'をmessageに格納して、表示をオン（show = true）にする
+        --}}
+        x-on:item-created="message = $event.detail.message; show = true;">
+
+    {{-- showがtrueになったら、メッセージエリア（<div class="alert__succes__area">以下）
+          を表示させる。x-textに"message"の中身を格納する（'商品を登録しました'）
+    --}}
+    <template x-if="show">
+        <div class="alert__success__area">
+            <div class="alert__success" x-text="message"></div>
         </div>
-      </div>
-    @endif
+    </template>
       
     @if(session('error'))
       <div class="alert__danger__area">
