@@ -205,6 +205,12 @@
     height: 40px;
 }
 
+.bought__list__table__delete button {
+    color: #f2efe7;
+    background-color: #da3838;
+    padding: 3px 10px;
+}
+
 @media (max-width: 768px) {
     .search__form__area {
         display: block;

@@ -41,6 +41,7 @@
             <th>商品名</th>
             <th>場所</th>
             <th>購入日</th>
+            <th></th>
           </tr>
 
           @foreach ($items as $item)
@@ -54,6 +55,15 @@
             <td>{{ $item->name }}</td>
             <td>{{ $item->store_name }}</td>
             <td>{{ $item->updated_at->format('Y年m月d日') }}</td>
+
+            <td class="bought__list__table__delete">
+                <form method="POST" action="{{ route('items.purchaseHistorydestroy', $item->id) }}">
+                    @csrf
+                    @method('DELETE')
+                
+                    <button type="submit" onclick="return confirm('本当に削除しますか？')">削除</button>
+                </form>
+            </td>
 
           </tr>
           @endforeach

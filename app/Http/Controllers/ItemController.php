@@ -70,6 +70,14 @@ class ItemController extends Controller
         return view('items.purchaseHistory', compact('items'));
     }
 
+    public function purchaseHistorydestroy(string $id)
+    {
+        $item = Item::findOrFail($id);
+        $item->delete();
+
+        return redirect()->route('items.purchaseHistoryShow')->with('success', '削除しました');
+    }
+
     public function search(Request $request)
     {
         $keywordName = $request->input('keyword_name');

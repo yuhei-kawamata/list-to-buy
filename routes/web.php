@@ -19,5 +19,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/items/purchase_history', [ItemController::class, 'purchaseHistoryShow'])->name('items.purchaseHistoryShow');
     Route::get('/items/purchase_history/search', [ItemController::class, 'search'])->name('items.search');
     Route::patch('/items/purchase_history/{id}/repurchase', [ItemController::class, 'repurchase'])->name('items.repurchase');
+    Route::delete('/items/purchase_history/{id}/delete', [ItemController::class, 'purchaseHistorydestroy'])->name('items.purchaseHistorydestroy');
 
 });
