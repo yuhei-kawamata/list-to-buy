@@ -14,7 +14,7 @@ class ItemController extends Controller
         $items = Item::with('user')
             ->where('complete_flag', 0)
             ->orderBy('hurry_flag', 'desc')
-            ->orderBy('created_at', 'desc')
+            ->orderBy('created_at', 'asc')
             ->get();
 
         return view('items.index', compact('items'));
