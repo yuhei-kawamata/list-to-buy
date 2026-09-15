@@ -3,7 +3,7 @@ body {
 }
 
 .register {
-    margin: 100px auto 0;
+    margin: 0 auto;
     max-width: 1230px;
     display: flex;
 }
@@ -54,10 +54,6 @@ body {
 }
 
 @media (max-width: 768px) {
-    .register {
-        margin: 0 auto;
-    }
-
     .register__area {
         width: 70%;
     }
