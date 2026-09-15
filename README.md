@@ -2,7 +2,7 @@
 
 家族間でリアルタイム（または簡単に）買い物リストを共有・管理できるWebアプリケーションです。
 
-![App Screenshot](./assets/demo-screenshot.png)
+![App Screenshot](./assets/demo_screenshot.png)
 
 ## 💡 開発の背景・概要
 
