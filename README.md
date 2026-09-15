@@ -2,7 +2,7 @@
 
 家族間でリアルタイム（または簡単に）買い物リストを共有・管理できるWebアプリケーションです。
 
-![App Screenshot](URL_TO_SCREENSHOT_OR_GIF) <!-- アプリのスクリーンショットやデモGIF画像を配置 -->
+![App Screenshot](./assets/demo-screenshot.png)
 
 ## 💡 開発の背景・概要
 
@@ -35,30 +35,9 @@
 ## 🚀 デモURL
 
 アプリを実際に触っていただけるURLはこちらです:  
-👉 [https://your-app-demo-link.com](https://your-app-demo-link.com)
+👉 [https://https://shopping-list-demo.onrender.com/items]
 
-※ テスト用アカウント（必要に応じて記載）:
+※ テスト用アカウント:
 
 - メールアドレス: `test@example.com`
 - パスワード: `password123`
-
-## ⚙️ ローカルでの起動方法 (環境構築)
-
-ローカル環境で動作確認を行う場合の手順です。
-
-```bash
-# リポジトリのクローン
-git clone [https://github.com/username/repository-name.git](https://github.com/username/repository-name.git)
-
-# ディレクトリ移動
-cd repository-name
-
-# パッケージのインストール
-npm install
-
-# 環境変数の設定 (.env ファイルの作成などが必要な場合)
-cp .env.example .env
-
-# ローカルサーバー起動
-npm run dev
-```
