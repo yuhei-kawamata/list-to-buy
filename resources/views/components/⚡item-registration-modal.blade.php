@@ -14,7 +14,7 @@ new class extends Component
     public $store_name = '';
     public $quantity = 1;
     public $user_id;
-    public $hurry_flag = 0;
+    public $hurry_flag = false;
 
     protected $rules = [
         'name' => 'required|string|max:255',

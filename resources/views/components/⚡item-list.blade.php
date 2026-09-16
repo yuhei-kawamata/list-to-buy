@@ -64,7 +64,7 @@ new class extends Component
 
                 <td>
                     <input type="checkbox" name="hurry_flag" value="1" 
-                    @checked($item->hurry_flag === 1) {{-- hurry_flagが１の時チェックが入るようにする --}}
+                    @checked($item->hurry_flag) {{-- hurry_flagがtrueの時チェックが入るようにする --}}
                     wire:click="toggleHurry({{ $item->id }})">
                 </td>
 
