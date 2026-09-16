@@ -22,4 +22,9 @@ class Item extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    /* 本番環境（PostgreSQL）で動かす際でも、正しい型で扱えるように修正 */
+    protected $casts = [
+        'hurry_flag' => 'boolean',
+    ];
 }
