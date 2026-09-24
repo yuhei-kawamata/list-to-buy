@@ -48,9 +48,6 @@
         </div>
       </form>
 
-      <div class="link__register">
-        <a href="/register">アカウントをお持ちでない方はこちら</a>
-      </div>
     </div>
 </body>
 </html>
